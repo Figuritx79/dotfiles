@@ -1,0 +1,128 @@
+{
+	"security.workspace.trust.untrustedFiles": "open",
+	"explorer.confirmDelete": false,
+	"editor.inlineSuggest.enabled": true,
+	"editor.mouseWheelZoom": true,
+	"editor.minimap.enabled": false,
+	"editor.scrollbar.horizontal": "hidden",
+	"editor.scrollbar.vertical": "hidden",
+	"editor.fontLigatures": true,
+	"emmet.syntaxProfiles": {
+		"html": {
+			"inline_break": true
+		}
+	},
+	"emmet.includeLanguages": {
+		"php": "html",
+		"javascript": "javascriptreact",
+		"vue-html": "html",
+		"blade.php": "html",
+		"blade": "html",
+		"vue": "html",
+		"react": "html",
+	},
+	"emmet.triggerExpansionOnTab": true,
+	"emmet.showExpandedAbbreviation": "always",
+	"editor.bracketPairColorization.enabled": true,
+	"editor.fontSize": 17,
+	"terminal.integrated.env.linux": {},
+	"editor.fontFamily": "'FantasqueSansM Nerd Font Mono','Monaspace Neon','FiraCode Nerd Font'",
+	"workbench.sideBar.location": "right",
+	"material-icon-theme.folders.color": "#26a69a",
+	"console-ninja.featureSet": "Community",
+	"editor.cursorStyle": "block-outline",
+	"workbench.productIconTheme": "fluent-icons",
+	"color-highlight.enable": true,
+	"editor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"editor.overviewRulerBorder": false,
+	"editor.hideCursorInOverviewRuler": true,
+	"editor.matchBrackets": false,
+	"breadcrumbs.enabled": false,
+	"workbench.editor.empty.hint": "hidden",
+	"window.density.editorTabHeight": "compact",
+	"editor.guides.bracketPairs": true,
+	"telemetry.telemetryLevel": "off",
+	"workbench.colorTheme": "rose-pine-nvchad-theme",
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"editor.cursorBlinking": "smooth",
+	"symbols.hidesExplorerArrows": false,
+	"workbench.iconTheme": "symbols",
+	"window.confirmSaveUntitledWorkspace": false,
+	"workbench.statusBar.visible": true,
+	"search.useIgnoreFiles": false,
+	"search.exclude": {
+		// Hide everything in /vendor, except the "laravel" and "livewire" folder.
+		"**/vendor/{[^l],?[^ai]}*": true,
+		// Hide everything in /public, except "index.php"
+		"**/public/{[^i],?[^n]}*": true,
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/_ide_helper.php": true,
+		"**/composer.lock": true,
+		"**/package-lock.json": true,
+		"storage": true,
+		".phpunit.result.cache": true
+	},
+	"files.associations": {
+		".php_cs": "php",
+		".php_cs.dist": "php"
+	},
+	"php.suggest.basic": true,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"keyword",
+					"variable.language",
+					"entity.other.attribute-name.html",
+					"entity.other.attribute-name",
+					"keyword.control",
+					"storage.type",
+					"comment",
+					"comment.block",
+					"comment.line"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+	"editor.fontWeight": "300",
+	"editor.inlineSuggest.suppressSuggestions": true,
+	"editor.lineHeight": 24,
+	"editor.lineNumbers": "off",
+	"scm.diffDecorations": "none",
+	"editor.hover.delay": 1500,
+	"editor.hover.enabled": true,
+	"workbench.tips.enabled": false,
+	"editor.colorDecorators": false,
+	"git.decorations.enabled": false,
+	"workbench.startupEditor": "none",
+	"editor.lightbulb.enabled": "off",
+	"editor.selectionHighlight": false,
+	"editor.renderLineHighlight": "none",
+	"editor.occurrencesHighlight": "off",
+	"problems.decorations.enabled": false,
+	"editor.renderControlCharacters": false,
+	"editor.gotoLocation.multipleReferences": "goto",
+	"editor.gotoLocation.multipleDefinitions": "goto",
+	"editor.gotoLocation.multipleDeclarations": "goto",
+	"workbench.editor.enablePreviewFromQuickOpen": false,
+	"editor.gotoLocation.multipleImplementations": "goto",
+	"editor.gotoLocation.multipleTypeDefinitions": "goto",
+	"diffEditor.renderSideBySide": false,
+	"editor.snippetSuggestions": "top",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"workbench.editor.showTabs": "none",
+	"editor.guides.indentation": false,
+	"vscode_custom_css.imports": [
+		"file:///home/Figuritx79/.config/custom-vscode.css",
+		"file:///home/Figuritx79/.config/vscode-script.js"
+	],
+	"extensions.ignoreRecommendations": true,
+	"editor.largeFileOptimizations": false,
+}
