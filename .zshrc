@@ -1,4 +1,4 @@
-# Created by newuser for 5.9
+# Created by newuser for 5.9  
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -53,6 +53,7 @@ source /home/Figuritx79/powerlevel10k/powerlevel10k.zsh-theme
 PATH=/root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
 
 # Manual aliases
+# System Commands alias
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
@@ -60,7 +61,17 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias zed='flatpak run dev.zed.Zed'
-
+alias lunar='/home/Figuritx79/.local/bin/lvim'
+alias dirtemp='cd $(mktemp -d)'
+# Proyect alias
+alias gcontapi='cd /home/Figuritx79/workspaces/app-contaduria/gcontaapi && code .'
+alias gconta='cd /home/Figuritx79/workspaces/app-contaduria/gconta && code .'
+# Git alias
+alias nb='git switch -c'
+alias gs='git switch'
+alias gps='git push -u origin'
+alias gall='git add .'
+alias gcom='git commit -m'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
@@ -140,6 +151,7 @@ export PATH="$PATH:/opt/sqldeveloper"
 export PATH="$PATH:/opt/nvim/bin"
 PATH=~/.console-ninja/.bin:$PATH
 
+# POWERLEVEL
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 export PATH="$PATH:/opt/mssql-tools18/bin"
 
@@ -150,9 +162,12 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# ANDROID SDK
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+# PHP 
 export PATH="/home/Figuritx79/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/Figuritx79/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
@@ -162,3 +177,5 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/Figuritx79/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
+
+
