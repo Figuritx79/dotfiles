@@ -66,12 +66,21 @@ alias dirtemp='cd $(mktemp -d)'
 # Proyect alias
 alias gcontapi='cd /home/Figuritx79/workspaces/app-contaduria/gcontaapi && code .'
 alias gconta='cd /home/Figuritx79/workspaces/app-contaduria/gconta && code .'
+alias services='podman start postgres-container && podman start valkey-server'
+alias serviceS='podman stop postgres-container && podman stop valkey-server'
+alias proaqua='code ~/Desktop/proaqua'
 # Git alias
 alias nb='git switch -c'
-alias gs='git switch'
+alias gch='git switch'
 alias gps='git push -u origin'
 alias gall='git add .'
+alias gadd='git add'
 alias gcom='git commit -m'
+alias gs='git status'
+alias gss='git status -s'
+alias stash='git stash --include-untracked --keep-index'
+alias stashpop='git stash pop'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
@@ -145,7 +154,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # Dev-tools
 export PATH="$PATH:/usr/local/go/bin"
 #export PATH="$PATH:/home/figuritx/dev-tools/cmdline-tools/bin"
-export PATH="$PATH:/home/figuritx/dev-tools/flutter/bin"
+export PATH="$PATH:/home/Figuritx79/dev-tools/flutter/bin"
 export PATH="$PATH:/opt/sqldeveloper"
 #export PATH="$PATH:/home/figuritx/.cargo/bin"
 export PATH="$PATH:/opt/nvim/bin"
@@ -177,5 +186,3 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="/home/Figuritx79/.local/share/fnm:$PATH"
   eval "`fnm env`"
 fi
-
-
