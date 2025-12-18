@@ -150,39 +150,33 @@ function rmk(){
 (( ! ${+functions[p10k-instant-prompt-finalize]} )) || p10k-instant-prompt-finalize
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-
+#open ssh agent
+eval $(ssh-agent -s)
 # Dev-tools
 export PATH="$PATH:/usr/local/go/bin"
-#export PATH="$PATH:/home/figuritx/dev-tools/cmdline-tools/bin"
 export PATH="$PATH:/home/Figuritx79/dev-tools/flutter/bin"
-export PATH="$PATH:/opt/sqldeveloper"
-#export PATH="$PATH:/home/figuritx/.cargo/bin"
+#export PATH="$PATH:/opt/sqldeveloper"
 export PATH="$PATH:/opt/nvim/bin"
 PATH=~/.console-ninja/.bin:$PATH
 
 # POWERLEVEL
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-export PATH="$PATH:/opt/mssql-tools18/bin"
+#export PATH="$PATH:/opt/mssql-tools18/bin"
 
-# pnpm
+
+#PNPM 
 export PNPM_HOME="/home/Figuritx79/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
-
-# ANDROID SDK
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-# PHP 
-export PATH="/home/Figuritx79/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/Figuritx79/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
 
 # fnm
 FNM_PATH="/home/Figuritx79/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/Figuritx79/.local/share/fnm:$PATH"
+  export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+# TSQL 
+export PATH="$PATH:/home/Figuritx79/.cargo/bin"
