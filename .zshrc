@@ -80,7 +80,8 @@ alias gs='git status'
 alias gss='git status -s'
 alias stash='git stash --include-untracked --keep-index'
 alias stashpop='git stash pop'
-
+# Go alias
+alias godoc="/home/Figuritx79/go/bin/godoc --http=:9090"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
@@ -180,3 +181,15 @@ fi
 
 # TSQL 
 export PATH="$PATH:/home/Figuritx79/.cargo/bin"
+# NVM 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/Figuritx79/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
+# opencode
+export PATH=/home/Figuritx79/.opencode/bin:$PATH
