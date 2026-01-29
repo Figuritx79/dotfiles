@@ -1,3 +1,4 @@
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Created by newuser for 5.9  
 # Fix the Java Problem
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -152,7 +153,7 @@ function rmk(){
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #open ssh agent
-eval $(ssh-agent -s)
+#eval $(ssh-agent -s)
 # Dev-tools
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/Figuritx79/dev-tools/flutter/bin"
