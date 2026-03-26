@@ -1,3 +1,37 @@
+
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="agnosterzak"
+
+plugins=( 
+    git
+    dnf
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
+source $ZSH/oh-my-zsh.sh
+
+# check the dnf plugins commands here
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf
+
+
+# Display Pokemon-colorscripts
+# Project page: https://gitlab.com/phoneybadger/pokemon-colorscripts#on-other-distros-and-macos
+#pokemon-colorscripts --no-title -s -r #without fastfetch
+pokemon-colorscripts --no-title -s -r | fastfetch -c $HOME/.config/fastfetch/config-pokemon.jsonc --logo-type file-raw --logo-height 10 --logo-width 5 --logo -
+
+# fastfetch. Will be disabled if above colorscript was chosen to install
+#fastfetch -c $HOME/.config/fastfetch/config-compact.jsonc
+
+# Set-up FZF key bindings (CTRL R for fuzzy history finder)
+source <(fzf --zsh)
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
+
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Created by newuser for 5.9  
 # Fix the Java Problem
@@ -62,14 +96,15 @@ alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias zed='flatpak run dev.zed.Zed'
-alias lunar='/home/Figuritx79/.local/bin/lvim'
 alias dirtemp='cd $(mktemp -d)'
+#In here if i need i can and another action
+alias update='sudo dnf5 update -y && sudo chown -R $(whoami) /usr/share/code/resources/app/out/vs/workbench'
 # Proyect alias
-alias gcontapi='cd /home/Figuritx79/workspaces/app-contaduria/gcontaapi && code .'
-alias gconta='cd /home/Figuritx79/workspaces/app-contaduria/gconta && code .'
-alias services='podman start postgres-container && podman start valkey-server'
-alias serviceS='podman stop postgres-container && podman stop valkey-server'
-alias proaqua='code ~/Desktop/proaqua'
+alias gcontapi='nvim ~/workspaces/gcontaapi'
+alias gconta='nvim ~/workspaces/gconta'
+# Containers services 
+alias services='podman start postgres-container && podman start gs-minio'
+alias service-stop='podman stop postgres-container && podman start gs-minio'
 # Git alias
 alias nb='git switch -c'
 alias gch='git switch'
@@ -82,7 +117,9 @@ alias gss='git status -s'
 alias stash='git stash --include-untracked --keep-index'
 alias stashpop='git stash pop'
 # Go alias
-alias godoc="/home/Figuritx79/go/bin/godoc --http=:9090"
+alias godoc="~/go/bin/godoc --http=:9090"
+alias bootdev = '~/go/bin/bootdev'
+alias sqlc="~/go/bin/sqlc"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Plugins
