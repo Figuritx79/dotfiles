@@ -100,13 +100,12 @@ alias dirtemp='cd $(mktemp -d)'
 #In here if i need i can and another action
 alias update='sudo dnf5 update -y && sudo chown -R $(whoami) /usr/share/code/resources/app/out/vs/workbench'
 # Proyect alias
-alias gcontapi='nvim ~/workspaces/gcontaapi'
-alias gconta='nvim ~/workspaces/gconta'
+alias gcontapi='cd ~/workspaces/gcontaapi && nvim ./'
 # Containers services 
 alias services='podman start postgres-container && podman start gs-minio'
 alias service-stop='podman stop postgres-container && podman start gs-minio'
 # Git alias
-alias nb='git switch -c'
+alias gnb='git switch -c'
 alias gch='git switch'
 alias gps='git push -u origin'
 alias gall='git add .'

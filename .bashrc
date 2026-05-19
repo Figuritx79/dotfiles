@@ -37,3 +37,8 @@ export PATH="$PATH:/opt/mssql-tools18/bin"
 export PATH="$PATH:/home/Figuritx79/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
